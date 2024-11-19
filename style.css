@@ -12,6 +12,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Estilo del header */
 header {
     background: #333;
     color: #fff;
@@ -30,36 +31,81 @@ header nav {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
 #hero {
     text-align: center;
-    padding: 2rem 1rem;
-    background: #007bff;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
 }
 
 #hero h2 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
+#hero .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#hero .description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+/* Secciones generales */
 section {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 20px;
 }
 
+section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    line-height: 1.8;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    color: #666;
+}
+
+/* Proyectos Section */
 #projects {
+    margin-top: 2rem;
+}
+
+.projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .project-card {
@@ -70,17 +116,33 @@ section {
     width: calc(50% - 1rem);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
 }
 
 .project-card img {
     max-width: 100%;
     border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
-.project-card h3 {
-    margin: 0.5rem 0;
-}
-
+/* Botones */
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -90,12 +152,23 @@ section {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
 .btn:hover {
     background: #0056b3;
 }
 
+/* Contacto */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
     background: #333;
